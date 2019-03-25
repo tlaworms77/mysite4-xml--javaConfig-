@@ -22,6 +22,12 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 
+	@RequestMapping(value = "/auth", method = RequestMethod.POST)
+	public void auth() {}
+	
+	@RequestMapping(value = "/logout", method = RequestMethod.GET)
+	public void logout() {}
+	
 	@RequestMapping(value = "/join", method = RequestMethod.GET)
 	public String join(@ModelAttribute UserVo userVo) {
 		return "user/join";
